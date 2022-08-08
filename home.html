@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./asset/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="./asset/general.css">
+        <link rel="icon" href="./asset/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <hr id="vertical-line">
+
+       
+
+       <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="vertical-line"></div>
+                <div class="blue-ball"></div>
+            </div>
+            <div class="col-6">
+                <h1>My Bootstrap Head</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+       <div class="container-fluid">
+        <h1>Container Fluid</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       <div id="counter" onclick="changeHTML()">
+        Counter 1
+       </div>
+       <div class="container">
+        <div class="row d-block d-sm-none" id="row-bs">
+            <div class="col-lg-4 col-md-6 col-12 d-none d-sm-block" style="background-color: #782782; height: 50px;" onmouseenter="changeColor()" ></div>
+            <div class="col-lg-4 col-md-6 col-12" style="background-color: #1b19c6; height: 50px;" onmouseenter="changeColor()"></div>
+            <div class="col-lg-4 col-md-6 col-12" style="background-color: #27823f; height: 50px;" onmouseenter="changeColor()"></div>
+            <!-- <div class="col-xxl-3 col-sm-4" style="background-color: #da671a; height: 50px;" onclick="alert('eh toel toel')" onmouseenter="changeColor()" onmouseleave="changeColor2()" on></div> -->
+        </div>
+        <div class="row justify-content-center d-none d-lg-block d-xl-none">
+            <div class="col-xxl-3 col-sm-4 justify-content-center" style="background-color: #da671a; height: 50px;"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function changeHTML() {
+            document.getElementById("counter").innerHTML = '<p>Test DOM</p>'
+            changeColor()
+        }
+
+        function changeColor() {
+            document.querySelector("#row-bs div").style.background = "red"
+        }
+        function changeColor2() {
+            document.querySelector("#row-bs div").style.background = "yellow"
+        }
+    </script>
+    <script src="./asset/bootstrap/bootstrap.min.js"></script>
+</html>
